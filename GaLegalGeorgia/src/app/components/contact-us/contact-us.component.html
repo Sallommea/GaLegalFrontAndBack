@@ -1,0 +1,117 @@
+<div class="container-custom">
+  <div class="form-layout-grid form-grid">
+    <div class="flex-column contactus-1">
+      <h2 class="head-2">დაგვიკავშირდი</h2>
+      <p class="form-title">
+        შეავსეთ ქვემოთ მოცემული ფორმა და ჩვენ დაგიკავშირდებით კონსულტაციის
+        გასაწევად თქვენთვის სასურველ დროს. პირველად კონსულტაციებს გაგიწევთ
+        Zoom-ის, ტელეფონის საშუალებით ან შეგიძლიათ ეწვიოთ ჩვენს ერთ-ერთ ოფისს.
+      </p>
+      <hr />
+      <div class="flex-column contact-info">
+        <p class="form-title"><span>ტელეფონი:</span> 595499193</p>
+        <p class="form-title"><span>იმეილი:</span> galegalgeorgia@gmail.com</p>
+        <p class="form-title">
+          <span> მისამართი: </span>ჭავჭავაძის 20, სართული 17, 0162, თბილისი,
+          საქართველო
+        </p>
+        <a class="form-title hey">
+          <img src="../../../assets/logo-instagram.svg" alt="" />ინსტაგრამი</a
+        >
+        <a class="form-title hey">
+          <img src="../../../assets/logo-facebook.svg" alt="" /> ფეისბუქი</a
+        >
+        <a class="form-title hey">
+          <img src="../../../assets/logo-linkedin.svg" alt="" /> ლინკდინი</a
+        >
+      </div>
+    </div>
+    <div class="form-section">
+      <div class="form">
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit($event)">
+          <div class="form--grid">
+            <div class="textarea">
+              <app-input
+                placeholder="{{ 'FORM.PNAME' | translate }}"
+                [control]="contactForm.controls.firstName"
+                [isSubmitAttempted]="isSubmitted"
+                maxlength="25"
+              >
+                <span title
+                  >{{ "FORM.FIRSTNAME" | translate
+                  }}<span class="asterix-form">*</span></span
+                >
+                <span hint> {{ "FORM.REQUIRED" | translate }}</span>
+                <span minlength>{{ "FORM.MINLENGTH" | translate }}</span>
+              </app-input>
+            </div>
+            <div class="textarea">
+              <app-input
+                placeholder="{{ 'FORM.PLASTNAME' | translate }}"
+                [control]="contactForm.controls.lastName"
+                [isSubmitAttempted]="isSubmitted"
+                maxlength="25"
+                ><span title
+                  >{{ "FORM.LASTNAME" | translate
+                  }}<span class="asterix-form">*</span></span
+                >
+                <span hint> {{ "FORM.REQUIRED" | translate }}</span>
+                <span minlength>{{ "FORM.MINLENGTH" | translate }}</span>
+              </app-input>
+            </div>
+            <div class="textarea">
+              <app-input
+                placeholder="+995 595 44 55 44"
+                [isNumber]="true"
+                [isSubmitAttempted]="isSubmitted"
+                [control]="contactForm.controls.phoneNumber"
+                maxlength="13"
+                ><span title
+                  >{{ "FORM.PHONE" | translate
+                  }}<span class="asterix-form">*</span></span
+                >
+                <span hint> {{ "FORM.REQUIRED" | translate }}</span>
+                <span invalidnumber> {{ "FORM.INPHONE" | translate }}</span>
+              </app-input>
+            </div>
+            <div class="textarea">
+              <app-input
+                placeholder="mariamgvasalia@mail.com"
+                [control]="contactForm.controls.email"
+                [isSubmitAttempted]="isSubmitted"
+                maxlength="30"
+              >
+                <span title
+                  >{{ "FORM.EMAIL" | translate
+                  }}<span class="asterix-form">*</span>
+                </span>
+                <span hint> {{ "FORM.REQUIRED" | translate }}</span>
+                <span invalidemail> {{ "FORM.INEMAIL" | translate }}</span>
+              </app-input>
+            </div>
+            <div class="textarea">
+              <app-input
+                placeholder="{{ 'FORM.PCOMPANY' | translate }}"
+                [control]="contactForm.controls.company"
+              >
+                <span title>{{ "FORM.COMPANY" | translate }}</span>
+              </app-input>
+            </div>
+            <div class="flex-column textarea">
+              <label class="mb-4">{{ "FORM.MESSAGE" | translate }}</label>
+              <textarea
+                formControlName="description"
+                rows="10"
+                placeholder="{{ 'FORM.PMESSAGE' | translate }}"
+              ></textarea>
+            </div>
+
+            <app-button type="submit">{{ "HOME.BOOK" | translate }}</app-button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<hr />
+<app-info-sent-modal (close)="closeModal()"></app-info-sent-modal>

@@ -1,0 +1,101 @@
+<header class="header-background">
+  <div class="container-custom header">
+    <div class="flex-center">
+      <img class="main-logo" src="../../assets/logo.png" alt="" />
+      <div class="name">
+        <a routerLink="./">GA LEGAL</a>
+        <a routerLink="./">GEORGIA</a>
+      </div>
+    </div>
+    <nav class="nav">
+      <div class="main-nav">
+        <ul class="main-nav-list">
+          <li>
+            <a
+              class="main-nav-link btn-link"
+              routerLinkActive="active"
+              routerLink="about"
+            >
+              <div class="btn-content">
+                <div class="btn-text">
+                  <span> {{ "NAV.ABOUT" | translate }}</span>
+                </div>
+              </div></a
+            >
+          </li>
+          <li>
+            <a
+              class="main-nav-link btn-link"
+              routerLink="practiceareas"
+              routerLinkActive="active"
+            >
+              <div class="btn-content">
+                <div class="btn-text">
+                  <span>{{ "NAV.PRACTICEAREAS" | translate }}</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              class="main-nav-link btn-link"
+              routerLink="contactus"
+              routerLinkActive="active"
+            >
+              <div class="btn-content">
+                <div class="btn-text">
+                  <span> {{ "NAV.CONTACT" | translate }}</span>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="main-nav-list no-padding nav-icons">
+          <li>
+            <div class="icons">
+              <a class="social-media-icon">
+                <img
+                  class="icon"
+                  src="../../../assets/logo-facebook (1).svg"
+                  alt=""
+                />
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="icons">
+              <a class="social-media-icon">
+                <img
+                  class="icon"
+                  src="../../../assets/logo-instagram (1).svg"
+                  alt=""
+                />
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="icons">
+              <a class="social-media-icon">
+                <img
+                  class="icon"
+                  src="../../../assets/logo-linkedin (1).svg"
+                  alt=""
+                />
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="select">
+              <select class="custom-select" (change)="changeLanguage($event)">
+                <option value="ge" [selected]="lang == 'ge'">GE</option>
+                <option value="en" [selected]="lang == 'en'">EN</option>
+              </select>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>

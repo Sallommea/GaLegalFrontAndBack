@@ -1,0 +1,54 @@
+<ng-container *ngIf="show">
+  <div class="container-custom section-1" *ngIf="show">
+    <div class="row mb-5">
+      <div class="flex-center">
+        <p class="section-2-title">{{ "HOME.PRACTICEAREAS" | translate }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div
+        *ngFor="let areas of practiceAreas"
+        class="col-lg-4 col-md-6 col-sm-12 try album-card pb-5"
+      >
+        <app-card
+          (open)="openModal($event)"
+          [id]="areas.id"
+          [card]="areas.title"
+        ></app-card>
+      </div>
+    </div>
+  </div>
+  <div class="yellow-bc">
+    <div class="container-custom flex-column content">
+      <h1>რატომ ჩვენ?</h1>
+      <ul class="sector-2-content">
+        <li>
+          <img src="../../../assets/checkmark-done.svg" alt="" />
+          <p>
+            ჩვენ გეხმარებით თქვენს წინაშე არსებული სამართლებრივი გამოწვევების
+            გადაწყვეტაში იმ სფეროებში, სადაც დიდი ცოდნა და პრაქტიკული
+            გამოცდილება გვაქვს და გთავაზობთ საუკეთესო იურიდიულ მომსახურებას.
+          </p>
+        </li>
+        <li>
+          <img src="../../../assets/checkmark-done.svg" alt="" />
+
+          <p>
+            უფლებების დაცვა მხოლოდ კანონის ცოდნა არ არის. ჩვენ გვჯერა ყველა
+            შემთხვევა განსხვავებულია და მხედველობაში ვიღებთ ყოველი კლიენტის
+            ინდივიდუალურ საჭიროებებს, რათა უკეთ შევძლოთ თქვენი დაცვა და
+            წარმომადგენლობა.
+          </p>
+        </li>
+        <li>
+          <img src="../../../assets/checkmark-done.svg" alt="" />
+          <p>
+            ჩვენთან პირველი კონსულტაცია უფასოა. ამას გარდა, გთავაზობთ გადახდის
+            მოქნილ გრაფიკს, რომელიც თქვენს ბიუჯეტთან შესაბამისობაში იქნება.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</ng-container>
+<app-details [description]="this.foundItem" [title]="this.title"></app-details>

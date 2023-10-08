@@ -1,0 +1,69 @@
+.yellow-bc {
+  background: #333333;
+  color: #ffffffbe;
+  padding: 3rem;
+}
+
+h1 {
+  font-size: 4.4rem;
+  font-family: "NotoSansGeorgian-Light";
+}
+.content p {
+  font-size: 2rem;
+  line-height: 3rem;
+  font-family: "NotoSansGeorgian-Regular";
+}
+.about {
+  padding: 5rem 0;
+}
+.section-first {
+  align-items: flex-start;
+}
+.about-grid {
+  display: grid;
+  grid-column-gap: 2rem;
+  grid-row-gap: 1rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+.album-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+}
+.row {
+  margin: 0;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.contactus {
+  margin-bottom: 5rem;
+  font-size: 6.2rem;
+  font-family: "NotoSansGeorgian-Extralight";
+}
+
+.mobile {
+  border: solid 2px #e3b0199f;
+  border-radius: 6.25rem;
+  transition: all 0.5s;
+  padding: 1rem 0rem;
+  cursor: pointer;
+  color: #ffffffa2;
+
+  font-family: "NotoSansGeorgian-Regular";
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background-color: #3c3c3c1b;
+}
+.mobile:hover {
+  background-color: #e3b0196b;
+  cursor: pointer;
+  color: #333333f6;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.34);
+}

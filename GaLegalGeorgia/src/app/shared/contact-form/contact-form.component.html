@@ -1,0 +1,77 @@
+<div class="container-custom">
+  <div class="form-layout-grid form-grid">
+    <h2 class="head-2">
+      ჩვენი იურისტები მზად არიან გაგიწიონ უფასო კონსულტაცია
+    </h2>
+    <div class="form-section">
+      <p class="form-title">
+        შეავსეთ ქვემოთ მოცემული ფორმა და ჩვენ დაგიკავშირდებით კონსულტაციის
+        გასაწევად თქვენთვის სასურველ დროს. პირველად კონსულტაციებს გაგიწევთ
+        Zoom-ის, ტელეფონის საშუალებით ან შეგიძლიათ ეწვიოთ ჩვენს ერთ-ერთ ოფისს.
+      </p>
+      <div class="form">
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit($event)">
+          <div class="form--grid">
+            <div class="">
+              <app-input
+                placeholder="მარიამ"
+                [control]="contactForm.controls.firstName"
+                [isSubmitAttempted]="isSubmitted"
+              >
+                <span title>სახელი<span class="asterix-form">*</span></span>
+              </app-input>
+            </div>
+            <div>
+              <app-input
+                placeholder="დოლიძე"
+                [control]="contactForm.controls.lastName"
+                [isSubmitAttempted]="isSubmitted"
+                ><span title
+                  >გვარი<span class="asterix-form">*</span></span
+                ></app-input
+              >
+            </div>
+            <div class="">
+              <app-input
+                placeholder="+995 595 44 55 44"
+                [isNumber]="true"
+                [isSubmitAttempted]="isSubmitted"
+                [control]="contactForm.controls.phone"
+                ><span title
+                  >ტელეფონი<span class="asterix-form">*</span></span
+                ></app-input
+              >
+            </div>
+            <div class="">
+              <app-input
+                placeholder="mariamdolidze@mail.com"
+                [control]="contactForm.controls.email"
+                [isSubmitAttempted]="isSubmitted"
+              >
+                <span title>იმეილი<span class="asterix-form">*</span></span>
+              </app-input>
+            </div>
+            <div class="textarea">
+              <app-input
+                placeholder="კომპანიის სახელი"
+                [control]="contactForm.controls.company"
+              >
+                <span title>კომპანია</span>
+              </app-input>
+            </div>
+            <div class="flex-column textarea">
+              <label class="mb-4">საქმის არსი</label>
+              <textarea
+                formControlName="description"
+                rows="10"
+                placeholder="მოგვიყევი თქვენი პრობლემის შესახებ"
+              ></textarea>
+            </div>
+
+            <app-button type="submit">დაჯავშნე კონსულტაცია</app-button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

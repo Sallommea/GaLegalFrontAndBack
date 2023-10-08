@@ -1,0 +1,49 @@
+.section-2-title {
+  font-family: "NotoSansGeorgian-Extralight";
+  font-size: 3.6rem;
+  color: #333333;
+  font-weight: 200;
+  padding: 4rem 2rem;
+}
+
+.yellow-bc {
+  background: #333333;
+  color: #ffffffbe;
+  padding: 4rem;
+  margin-left: 20%;
+  border-radius: 1.6rem 0 0 1.6rem;
+}
+
+h1 {
+  font-size: 5.4rem;
+  font-family: "NotoSansGeorgian-Light";
+  /* padding: 2rem; */
+}
+
+.section-1 {
+  padding-bottom: 5rem;
+}
+
+.content p {
+  font-size: 2rem;
+  line-height: 3rem;
+  font-family: "NotoSansGeorgian-Regular";
+}
+.content {
+  gap: 3rem;
+}
+.sector-2-content {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  font-family: "NotoSansGeorgian-Regular";
+  gap: 3rem;
+}
+img {
+  width: 3rem;
+}
+li {
+  display: flex;
+  /* align-items: flex-start; */
+  gap: 2.5rem;
+}
